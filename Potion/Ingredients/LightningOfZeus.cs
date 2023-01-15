@@ -2,7 +2,7 @@
 {
     internal class LightningOfZeus : Ingredient
     {
-        string[] compatibilityElementsWithLightning = { "Water", "Fire" };
+        string[] compatibilityElementsWithLightning = { "Lightning", "Water", "Fire" };
 
         public LightningOfZeus() 
         {
