@@ -10,7 +10,7 @@
         protected List<string> elements = new();
         protected List<string> notCompatibilityElement = new();
 
-        public string CreatedPotion(params Ingredient[] ingredients)
+        public string CreatePotion(params Ingredient[] ingredients)
         {
             List<string> notCompatibilityAllElements = new();
             List<string> elementsAllIngredients = new();

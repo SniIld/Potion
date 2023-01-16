@@ -11,7 +11,7 @@ namespace Potion
             WaterFromElivagar waterFromElivagar = new();
             LightningOfZeus lightningOfZeus = new();
 
-            Console.WriteLine(ingredient.CreatedPotion(waterFromElivagar, lightningOfZeus));
+            Console.WriteLine(ingredient.CreatePotion(waterFromElivagar, lightningOfZeus));
         }
     }
 }
