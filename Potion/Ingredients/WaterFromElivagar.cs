@@ -4,16 +4,21 @@ namespace Potion.Ingredients
 {
     internal class WaterFromElivagar : Ingredient
     {
-        string[] compatibilityElementsWithWater = { "Water", "Soil", "Lightning" };
+        private string[] notCompatibilityElementsWithWater = { "Air" };
+        private string[] elementsThisIngredient = { "Water", "Life", "Time" };
 
-        public WaterFromElivagar()
+        internal WaterFromElivagar()
         {
-            element = "Water";
             numberOfEmptyFlask++;
 
-            foreach (var item in compatibilityElementsWithWater)
+            foreach (var item in notCompatibilityElementsWithWater)
             {
-                compatibilityElement.Add(item);
+                notCompatibilityElement.Add(item);
+            }
+
+            foreach (var item in elementsThisIngredient)
+            {
+                elements.Add(item);
             }
         }
     }
