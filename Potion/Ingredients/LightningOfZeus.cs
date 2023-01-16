@@ -7,7 +7,8 @@
 
         internal LightningOfZeus() 
         {
-            numberOfEmptyFlask++;
+            name = "Lightning of Zeus";
+            numberOfIngtrdients++;
 
             foreach (var item in notCompatibilityElementsWithLightning)
             {

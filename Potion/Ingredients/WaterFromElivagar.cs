@@ -9,7 +9,8 @@ namespace Potion.Ingredients
 
         internal WaterFromElivagar()
         {
-            numberOfEmptyFlask++;
+            name = "Water from Elivagar";
+            numberOfIngtrdients++;
 
             foreach (var item in notCompatibilityElementsWithWater)
             {
