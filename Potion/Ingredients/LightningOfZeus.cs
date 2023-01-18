@@ -2,22 +2,22 @@
 {
     internal class LightningOfZeus : Ingredient
     {
-        private string[] notCompatibilityElementsWithLightning = { "Blood" };
-        private string[] elementsThisIngredient = { "Lightning", "Shine", "Sound", "Energy" };
+        private string[] elementsIncompatibleWithTheIngredient = { "Blood" };
+        private string[] ingredientElements = { "Lightning", "Shine", "Sound", "Energy" };
 
         internal LightningOfZeus() 
         {
             name = "Lightning of Zeus";
             numberOfIngtrdients++;
 
-            foreach (var item in notCompatibilityElementsWithLightning)
+            foreach (var item in elementsIncompatibleWithTheIngredient)
             {
-                notCompatibilityElement.Add(item);
+                base.elementsIncompatibleWithTheIngredient.Add(item);
             }
 
-            foreach (var item in elementsThisIngredient)
+            foreach (var item in ingredientElements)
             {
-                elements.Add(item);
+                base.ingredientElements.Add(item);
             }
         }
     }

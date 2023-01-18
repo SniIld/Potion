@@ -1,25 +1,23 @@
-﻿using System.Xml.Linq;
-
-namespace Potion.Ingredients
+﻿namespace Potion.Ingredients
 {
     internal class WaterFromElivagar : Ingredient
     {
-        private string[] notCompatibilityElementsWithWater = { "Air" };
-        private string[] elementsThisIngredient = { "Water", "Life", "Time" };
+        private string[] elementsIncompatibleWithTheIngredient = { "Air" };
+        private string[] ingredientElements = { "Water", "Life", "Time" };
 
         internal WaterFromElivagar()
         {
             name = "Water from Elivagar";
             numberOfIngtrdients++;
 
-            foreach (var item in notCompatibilityElementsWithWater)
+            foreach (var item in elementsIncompatibleWithTheIngredient)
             {
-                notCompatibilityElement.Add(item);
+                base.elementsIncompatibleWithTheIngredient.Add(item);
             }
 
-            foreach (var item in elementsThisIngredient)
+            foreach (var item in ingredientElements)
             {
-                elements.Add(item);
+                base.ingredientElements.Add(item);
             }
         }
     }

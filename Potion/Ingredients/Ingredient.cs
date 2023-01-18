@@ -7,27 +7,26 @@
         protected int numberOfIngtrdients { get; set; }
         protected string name { get; set; }
         
-        protected List<string> elements = new();
-        protected List<string> notCompatibilityElement = new();
+        protected List<string> ingredientElements = new();
+        protected List<string> elementsIncompatibleWithTheIngredient = new();
 
         public string CreatePotion(params Ingredient[] ingredients)
         {
             List<string> notCompatibilityAllElements = new();
             List<string> elementsAllIngredients = new();
-
+            
             
             foreach (var item in ingredients)
             {
-
-                for (int i = 0; i < item.notCompatibilityElement.Count; i++)
+                
+                for (int i = 0; i < item.elementsIncompatibleWithTheIngredient.Count; i++)
                 {
-                    notCompatibilityAllElements.Add(item.notCompatibilityElement[i]);
-
+                    notCompatibilityAllElements.Add(item.elementsIncompatibleWithTheIngredient[i]);
                 }
 
-                for (int i = 0; i < item.elements.Count; i++)
+                for (int i = 0; i < item.ingredientElements.Count; i++)
                 {
-                    elementsAllIngredients.Add(item.elements[i]);
+                    elementsAllIngredients.Add(item.ingredientElements[i]);
                 }
 
                 if (item.numberOfIngtrdients <= 0)
